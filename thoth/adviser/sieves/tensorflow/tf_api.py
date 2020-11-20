@@ -111,7 +111,11 @@ class TensorFlowAPISieve(Sieve):
                 self._no_api_logged = True
                 msg = "No TensorFlow symbols API found in the database that would match TensorFlow symbols used"
                 self.context.stack_info.append(
-                    {"type": "WARNING", "message": msg, "link": self._LINK_NO_API,}
+                    {
+                        "type": "WARNING",
+                        "message": msg,
+                        "link": self._LINK_NO_API,
+                    }
                 )
 
             yield from package_versions
